@@ -1,8 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Posts</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -13,10 +22,10 @@
 
   <tbody>
     <% @posts.each do |post| %>
-      <tr>
+      <tr class="posts">
         <td><%= post.title %></td>
         <td><%= post.description %></td>
-        <td><%= link_to 'Show', post %></td>
+        <!-- <td><%= link_to 'Show', post %></td> -->
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -27,3 +36,6 @@
 <br>
 
 <%= link_to 'New Post', new_post_path %>
+
+  </body>
+</html>

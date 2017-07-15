@@ -21,6 +21,14 @@
     <%= form.text_field :email, id: :admin_email %>
   </div>
 
+  <div class="field">
+      Password: <%= form.password_field :password %>
+  </div>
+
+  <div class="field">
+      Password Confirmation: <%= form.password_field :password_confirmation %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

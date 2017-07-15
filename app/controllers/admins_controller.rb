@@ -28,8 +28,10 @@ class AdminsController < ApplicationController
 
     respond_to do |format|
       if @admin.save
+        session[:admin_id] = @admin.id
         format.html { redirect_to @admin, notice: 'Admin was successfully created.' }
         format.json { render :show, status: :created, location: @admin }
+
       else
         format.html { render :new }
         format.json { render json: @admin.errors, status: :unprocessable_entity }
@@ -69,6 +71,6 @@ class AdminsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_params
-      params.require(:admin).permit(:name, :email)
+      params.require(:admin).permit(:name, :email, :password, :password_confirmation)
     end
 end
