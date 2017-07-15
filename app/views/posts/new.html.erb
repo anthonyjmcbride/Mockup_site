@@ -1,9 +1,5 @@
 <h1>New Post</h1>
 
-<%= form_for @posts, url: posts_path, html: { multipart: true } do |form| %>
-  <%= form.file_field :avatar %>
-<% end %>
-
 <%= render 'form', post: @post %>
 
 <%= link_to 'Back', posts_path %>
