@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: mockup_app2_development
+  pool: 5
+
+
+test: &TEST
+  adapter: postgresql
+  encoding: utf8
+  database: mockup_app2_test
+  pool: 5
+
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: mockup_app2_production
+  pool: 5
+
+
+cucumber:
+  <<: *TEST
