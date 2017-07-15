@@ -5,16 +5,13 @@
     <link rel="stylesheet" type="text/css" href="/mockup.css">
     <title>iPhone Mockups</title>
   </head>
-  <body>
+  <body class="home">
 
-    <header>
+    <!-- <header>
       <div id="freemockups">
       Free Mockuuups
       </div>
 
-      <div id="logo">
-        <img src="mockuplogo.jpeg" alt="" width="35">
-      </div>
 
       <div class="align-right">
           <div id="numshares">
@@ -25,7 +22,7 @@
              <button type="button" name="Tweet">Tweet</button>
             </div>
         </div>
-    </header>
+    </header> -->
 
 
 
@@ -33,7 +30,7 @@
 
 
 
-    <div class="overlap-text">
+    <!-- <div class="overlap-text">
 
         <div id="NewiPhone">New iPhone.</div>
 
@@ -43,80 +40,69 @@
 
         <div id="get-mockup">
           <div>
-          <button type="button" name="button" class="mockup-button">Get Mockups</button>
+          <button type="button" name="button" class="mockup-button"><%= link_to 'All Products', posts_path %></button>
           </div>
         </div>
-            <!-- <div class="get-mockup"> -->
+        <br>
 
-            <!-- </div> -->
-<br>
-        <a href="url">View Package</a>
-    </div>
+    </div> -->
 
 
 
-
+<h1 class="products-headline">PRODUCTS</h1>
   <div class="container">
     <div class="section-2">
       <div class="container" id="middle-three-text">
 
+        <table class="table">
+          <thead>
+            <tr>
+              <!-- <th>Title</th>
+              <th>Description</th>
+              <th>Photo</th> -->
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-        <div class="middle-text" id="iPhone5s">
-          <div class="iPhone5s-text">
-            <h2><strong>New iPhone 6</strong></h2>
-            6 x Adjustable Sketch &amp; PSD files
-          </div>
-             <!-- <div id="middle-price-btn-div"> -->
-               <button type="button" name="button" class="middle-price-btn">$4.90</button>
-             <!-- </div> -->
-        </div>
-
-        <div class="middle-text" id="iPhone5s">
-          <div class="iPhone5s-text">
-            <h2><strong>New iPhone 5s</strong></h2>
-            6 x Adjustable Sketch &amp; PSD files
-          </div>
-             <!-- <div id="middle-price-btn-div"> -->
-               <button type="button" name="button" class="middle-price-btn">$4.90</button>
-             <!-- </div> -->
-        </div>
-
-        <div class="middle-text" id="iPhone5s">
-          <div class="iPhone5s-text">
-            <h2><strong>Free Sample</strong></h2>
-            6 x Adjustable Sketch &amp; PSD files
-          </div>
-             <!-- <div id="middle-price-btn-div"> -->
-               <button type="button" name="button" class="middle-price-btn">$4.90</button>
-             <!-- </div> -->
-        </div>
+          <tbody class="">
+            <% @posts.each do |post| %>
+              <tr class="posts">
+                <td class=""> <%= image_tag(post.avatar.url(:medium)) %> <br><%= post.title %> <br><%= post.description %></td>
+                <!-- <td><%= link_to 'Show', post %></td> -->
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
       </div>
-    <div class="container" id="middle-three-images">
-      <div class="left-image">
-        <img src="iphone1.jpg" alt="" id="img1">
-      </div>
-      <div class="middle-image">
-        <img src="iphone2.jpg" alt="" id="img2">
-      </div>
-      <div class="middle-image">
-        <img src="iphone3.jpg" alt="" id="img3">
-      </div>
-    </div>
   </div>
 </div>
 
   <div class="container" id="mockup-on-dribble-div">
-      <h1 id="middle-sec-txt1">Mockuuups, made for you</h1>
-      <h3 id="middle-sec-txt2">Trusted by thousands of designers around the world</h3>
-      <button id="middle-sec-btn">Mockuuups on Dribble</button>
+      <!-- <h1 id="middle-sec-txt1">Mockuuups, made for you</h1>
+      <h3 id="middle-sec-txt2">Trusted by thousands of designers around the world</h3> -->
+      <%= link_to "<button id='middle-sec-btn'>Add A Product</button>".html_safe, new_post_path %>
   </div>
 
-  <div class="container">
-    <img src="bottom_photo.jpg" alt="" width="100%">
+  <div class="bottom-container">
+    <!-- <img src="app/assets/images/bottom_photo.jpg" alt="" width="100%"> -->
   </div>
 
+<footer>
+<div class="left">
+  LEFT INFO
+</div>
 
+<div class="middle">
+  MIDDLE INFO
+</div>
+
+<div class="right">
+  RIGHT INFO
+</div>
+
+
+</footer>
 
 
 
