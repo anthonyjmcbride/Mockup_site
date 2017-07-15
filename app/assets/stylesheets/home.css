@@ -156,10 +156,11 @@ text-align: center;
 
 #mockup-on-dribble-div {
   font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-  height: 300px;
+  height: 150px;
   text-align: center;
-  border-top: .5px solid rgba(13, 13, 13, 0.2);
+  border-bottom: .5px solid rgba(13, 13, 13, 0.2);
   padding-top: 30px;
+  margin-bottom: 20px;
   /*border-top-width: .5px;*/
 }
 
@@ -218,7 +219,7 @@ text-align: center;
 }
 
 .middle-price-btn:hover {
-  background: #333333;
+  background: #f5f5f5;
   text-decoration: none;
 }
 
@@ -240,7 +241,7 @@ text-align: center;
 #middle-sec-btn {
   padding: 10px 15px 11px !important;
   font-size: 18px !important;
-  background-color: #C1C7CC;
+  background-color: #333333;
   font-weight: bold;
   /*text-shadow: 1px 1px #57D6C7;*/
   color: #FFFFFF;
@@ -257,7 +258,7 @@ text-align: center;
 }
 
 #middle-sec-btn:hover {
-  background: #333333;
+  background: #f5f5f5;
   text-decoration: none;
 }
 
