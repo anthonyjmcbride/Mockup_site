@@ -67,7 +67,7 @@
           <tbody class="">
             <% @posts.each do |post| %>
               <tr class="posts">
-                <td class=""> <%= image_tag(post.avatar.url(:medium)) %> <br><%= post.title %> <br><%= post.description %></td>
+                <td class=""> <%= image_tag(post.avatar.url(:medium)) %> <br><%= post.title %> <br><%= post.description %> <br> <%= post.price %></td>
                 <!-- <td><%= link_to 'Show', post %></td> -->
               </tr>
             <% end %>
@@ -90,16 +90,30 @@
 
 <footer>
 <div class="left">
-  LEFT INFO
+  <a href="#">Link 1</a><br>
+  <a href="#">Link 2</a><br>
+  <a href="#">Link 3</a><br>
+  <a href="#">Link 4</a><br>
+  <a href="#">Link 5</a><br>
 </div>
 
 <div class="middle">
-  MIDDLE INFO
+  <a href="#">Link 1</a><br>
+  <a href="#">Link 2</a><br>
+  <a href="#">Link 3</a><br>
+  <a href="#">Link 4</a><br>
+  <a href="#">Link 5</a><br>
+  <p id="copy">copyright 2017 wyncode homework, LLC</p> 
 </div>
 
 <div class="right">
-  RIGHT INFO
+  <a href="#">Link 1</a><br>
+  <a href="#">Link 2</a><br>
+  <a href="#">Link 3</a><br>
+  <a href="#">Link 4</a><br>
+  <a href="#">Link 5</a><br>
 </div>
+
 
 
 </footer>
