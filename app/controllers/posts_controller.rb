@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authorize, :set_post, only: [:create, :show, :edit, :update, :destroy]
+  before_action :authorize,  only: [:create, :show, :edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
@@ -58,6 +58,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    @post = Post.find(params[:id])
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }

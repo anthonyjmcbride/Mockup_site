@@ -1,3 +1,5 @@
+<div class="form-page">
+
 <%= form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
@@ -12,25 +14,28 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :post_title %>
+    <%= form.label :title, class: 'title-label'  %>
+    <%= form.text_field :title, id: :post_title, class: 'text_field' %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :post_description %>
+    <%= form.label :description, class: 'description-label' %>
+    <%= form.text_area :description, id: :post_description, class: 'text_field' %>
   </div>
 
-<div class="field">
-    <%= form.file_field :avatar %>
-</div>
+  <div class="field">
+    <%= form.label :price, class: 'price-label' %>
+    <%= form.text_field :price, id: :post_price, class: 'price_text_field' %>
+  </div>
 
-<div class="field">
-  <%= form.label :price %>
-  <%= form.text_field :price, id: :post_price %>
-</div>
+  <div class="field">
+      <%= form.file_field :avatar %>
+  </div>
+
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+</div>
