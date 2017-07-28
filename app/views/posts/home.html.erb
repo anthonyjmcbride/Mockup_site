@@ -49,80 +49,73 @@
 
 
 
-<h1 class="products-headline">PRODUCTS</h1>
-  <div class="container">
-    <div class="section-2">
-      <div class="container" id="middle-three-text">
+        <h1 class="products-headline">PRODUCTS</h1>
+          <div class="container">
+            <div class="section-2">
+              <div class="container" id="middle-three-text">
 
-        <table class="table">
-          <thead>
-            <tr>
-              <!-- <th>Title</th>
-              <th>Description</th>
-              <th>Photo</th> -->
-              <th colspan="3"></th>
-            </tr>
-          </thead>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <!-- <th>Title</th>
+                      <th>Description</th>
+                      <th>Photo</th> -->
+                      <th colspan="3"></th>
+                    </tr>
+                  </thead>
 
-          <tbody class="">
-            <% @posts.each do |post| %>
-              <tr class="posts">
-                <td class=""> <%= image_tag(post.avatar.url(:medium)) %> <br><%= post.title %> <br><%= post.description %> <br> $<%= post.price %>
-                  <button><%= link_to 'Edit', edit_post_path(post) %></button>
-                  <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+                  <tbody class="">
+                    <% @posts.each do |post| %>
+                      <tr class="posts">
+                        <td class=""> <%= image_tag(post.avatar.url(:medium)) %> <br><%= post.title %> <br><%= post.description %> <br> $<%= post.price %>
+                          <button><%= link_to 'Edit', edit_post_path(post) %></button>
+                          <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+                        </td>
 
-                </td>
+                        <!-- <td><%= link_to 'Show', post %></td> -->
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
 
-                <!-- <td><%= link_to 'Show', post %></td> -->
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+              </div>
+          </div>
+        </div>
 
-      </div>
-  </div>
-</div>
+          <div class="container" id="mockup-on-dribble-div">
+              <!-- <h1 id="middle-sec-txt1">Mockuuups, made for you</h1>
+              <h3 id="middle-sec-txt2">Trusted by thousands of designers around the world</h3> -->
+              <%= link_to "<button id='middle-sec-btn'>Add A Product</button>".html_safe, new_post_path %>
 
-  <div class="container" id="mockup-on-dribble-div">
-      <!-- <h1 id="middle-sec-txt1">Mockuuups, made for you</h1>
-      <h3 id="middle-sec-txt2">Trusted by thousands of designers around the world</h3> -->
-      <%= link_to "<button id='middle-sec-btn'>Add A Product</button>".html_safe, new_post_path %>
+          </div>
 
-  </div>
+          <div class="bottom-container">
+            <!-- <img src="app/assets/images/bottom_photo.jpg" alt="" width="100%"> -->
+          </div>
 
-  <div class="bottom-container">
-    <!-- <img src="app/assets/images/bottom_photo.jpg" alt="" width="100%"> -->
-  </div>
+        <footer>
 
-<footer>
-<div class="left">
-  <a href="#">Link 1</a><br>
-  <a href="#">Link 2</a><br>
-  <a href="#">Link 3</a><br>
-  <a href="#">Link 4</a><br>
-  <a href="#">Link 5</a><br>
-</div>
+          <div class="left">
+            <%= link_to 'Home', posts_path %><br>
+            <a href="#">View Post</a><br>
+            <a href="#">New Post</a><br>
+          </div>
 
-<div class="middle">
-  <a href="#">Link 1</a><br>
-  <a href="#">Link 2</a><br>
-  <a href="#">Link 3</a><br>
-  <a href="#">Link 4</a><br>
-  <a href="#">Link 5</a><br>
-  <p id="copy">copyright 2017 wyncode homework, LLC</p>
-</div>
+          <div class="middle">
+            <a href="">About Us</a><br>
+            <a href="#">Locations</a><br>
+            <a href="#">Contact Us</a><br>
+          </div>
 
-<div class="right">
-  <a href="#">Link 1</a><br>
-  <a href="#">Link 2</a><br>
-  <a href="#">Link 3</a><br>
-  <a href="#">Link 4</a><br>
-  <a href="#">Link 5</a><br>
-</div>
+          <div class="right">
+            <a href="#">Careers</a><br>
+            <a href="#">Privacy Policy</a><br>
+            <a href="#">Return Policy</a><br>
+          </div>
 
+        </footer>
 
-
-</footer>
+        <center><p id="copy">copyright 2017 wyncode homework, LLC</p></center>
 
 
 
