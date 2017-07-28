@@ -67,10 +67,10 @@
           <tbody class="">
             <% @posts.each do |post| %>
               <tr class="posts">
-                <td class=""> <%= image_tag(post.avatar.url(:medium)) %> <br><%= post.title %> <br><%= post.description %> <br> <%= post.price %>
+                <td class=""> <%= image_tag(post.avatar.url(:medium)) %> <br><%= post.title %> <br><%= post.description %> <br> $<%= post.price %>
                   <button><%= link_to 'Edit', edit_post_path(post) %></button>
                   <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
-              
+
                 </td>
 
                 <!-- <td><%= link_to 'Show', post %></td> -->
