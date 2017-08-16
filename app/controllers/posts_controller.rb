@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authorize,  only: [:create, :show, :edit, :update, :destroy]
+  before_action :authorize,  only: [:home, :create, :show, :edit, :update, :destroy]
   before_action :set_post, only: [:show, :update, :edit]
 
   # GET /posts
