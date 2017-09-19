@@ -7,22 +7,68 @@
   </head>
   <body class="home">
 
-    <!-- <header>
-      <div id="freemockups">
-      Free Mockuuups
+    <div class="section-one">
+      <div class="header-image">
       </div>
 
-
-      <div class="align-right">
-          <div id="numshares">
-            4852 Shares
+        <div class="header-pic-container">
+          <div class="left-header-pic">
+            <!-- right -->
           </div>
-            <div id="social-buttons">
-             <button type="button" name="Likes">Likes</button>
-             <button type="button" name="Tweet">Tweet</button>
-            </div>
+          <div class="center-header-pic">
+            <!-- center -->
+          </div>
+          <div class="right-header-pic">
+            <!-- left -->
+          </div>
         </div>
-    </header> -->
+    </div>
+
+    <div class="section-two-label">
+      Clothing
+    </div>
+    <div class="section-two">
+      <div class="left-section">
+        <%= link_to 'LOUIS VUITTON', posts_path %>
+      </div>
+      <div class="right-section">
+        <div class="right-top-section">
+          <%= link_to 'AM APPAREL', posts_path %>
+        </div>
+      <div class="right-bottom-section">
+        <div class="bottom-left-image">
+         <%= link_to 'CHANEL', posts_path %>
+        </div>
+        <div class="bottom-right-image">
+          <%= link_to 'GIORGIO ARMANI', posts_path %>
+        </div>
+      </div>
+      </div>
+    </div>
+
+<!-- SECTION 3-->
+    <div class="section-three-label">
+      Electronics
+    </div>
+    <div class="section-three">
+      <div class="three-left-section">
+        <%= link_to 'IPHONE 8', posts_path %>
+      </div>
+      <div class="three-right-section">
+        <div class="three-right-top-section">
+          <%= link_to 'AM APPAREL', posts_path %>
+        </div>
+      <div class="three-right-bottom-section">
+        <div class="three-bottom-left-image">
+         <%= link_to 'CHANEL', posts_path %>
+        </div>
+        <div class="three-bottom-right-image">
+          <%= link_to 'GIORGIO ARMANI', posts_path %>
+        </div>
+      </div>
+      </div>
+    </div>
+
 
 
 
@@ -47,50 +93,51 @@
 
     </div> -->
 
-
-
-        <h1 class="products-headline">PRODUCTS</h1>
-          <div class="container">
+          <!-- <div class="container">
             <div class="section-2">
               <div class="container" id="middle-three-text">
 
-                <table class="table">
-                  <thead>
+                <table class="table"> -->
+                  <!-- <thead>
                     <tr>
-                      <!-- <th>Title</th>
+                      <th>Title</th>
                       <th>Description</th>
-                      <th>Photo</th> -->
+                      <th>Photo</th>
                       <th colspan="3"></th>
                     </tr>
-                  </thead>
+                  </thead> -->
 
-                  <tbody class="">
+                  <!-- <tbody class="product-display">
                     <% @posts.each do |post| %>
                       <tr class="posts">
-                        <td class=""> <%= image_tag(post.avatar.url(:medium)) %> <br><%= post.title %> <br><%= post.description %> <br> $<%= post.price %>
-                          <!-- <button><%= link_to 'Edit', edit_post_path(post) %></button>
-                          <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button> -->
-                        </td>
+                        <td class="posts-content"> <%= image_tag(post.avatar.url(:medium)) %><br>
+                          <span class="post-title"> <%= post.title %> </span><br>
+                          <span class="post-decription"> <%= post.description %> </span><br>
+                          <span class="post-price"> $<%= post.price %> </span><br>
+                          <center class="show-button"><%= link_to 'Show >', post %></center> -->
+                          <!-- <td><%= link_to 'Show', post %></td> -->
+                        <!-- </td> -->
+                        <!-- <button><%= link_to 'Edit', edit_post_path(post) %></button>
+                        <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button> -->
 
-                        <!-- <td><%= link_to 'Show', post %></td> -->
-                      </tr>
+                      <!-- </tr>
                     <% end %>
                   </tbody>
                 </table>
 
               </div>
           </div>
-        </div>
+        </div> -->
 
-          <div class="container" id="mockup-on-dribble-div">
+          <!-- <div class="container" id="mockup-on-dribble-div"> -->
               <!-- <h1 id="middle-sec-txt1">Mockuuups, made for you</h1>
               <h3 id="middle-sec-txt2">Trusted by thousands of designers around the world</h3> -->
-              <%= link_to "<button id='middle-sec-btn'>Add A Product</button>".html_safe, new_post_path %>
+              <!-- <%= link_to "<button id='middle-sec-btn'>Add A Product</button>".html_safe, new_post_path %>
               <%= link_to "<button id='middle-sec-btn'>View Products</button>".html_safe, posts_path %>
           </div>
 
           <div class="bottom-container">
-          </div>
+          </div> -->
 
         <footer>
 

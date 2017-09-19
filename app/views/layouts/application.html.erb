@@ -9,14 +9,22 @@
   </head>
 
   <body class="login-display">
-    <% if current_admin %>
-    Welcome <%= current_admin.name %> | <%= link_to "Logout", '/logout' %>
-    <% else %>
-    <%= link_to 'Login', '/login' %> | <%= link_to 'Become An Admin', '/signup' %>
-    <% end %>
+    <div class="top">
 
+      <div class="current-login">
+        <% if current_admin %>
+        Welcome, <%= current_admin.name %> | <%= link_to "Logout", '/logout' %>
+        <% else %>
+        <%= link_to 'Login', '/login' %> | <%= link_to 'Become An Admin', '/signup' %>
+        <% end %>
+      </div>
 
-
+      <div class="nav-links">
+        <a id="home-button" href="#">Home</a>  <a id="mockups-button" href="#">Mockups</a>  <a id="new-product" href="#">Create New Product</a>
+      </div>
+    </div>
     <%= yield %>
+
+
   </body>
 </html>

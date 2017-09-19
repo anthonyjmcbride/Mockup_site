@@ -1,3 +1,17 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+a {
+  text-decoration: none;
+  /*gets rid of the underline under links*/
+    color: red;
+
+    &:visited {
+      color: none;
+    }
+
+    &:hover {
+      color: navy;
+      background-color: none;
+    }
+}
