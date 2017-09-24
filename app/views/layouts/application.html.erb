@@ -8,9 +8,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="login-display">
-    <div class="top">
+  <body>
 
+    <div class="top">
       <div class="current-login">
         <% if current_admin %>
         Welcome, <%= current_admin.name %> | <%= link_to "Logout", '/logout' %>

@@ -3,15 +3,72 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 a {
   text-decoration: none;
-  /*gets rid of the underline under links*/
-    color: red;
-
-    &:visited {
-      color: none;
-    }
-
-    &:hover {
-      color: navy;
-      background-color: none;
-    }
 }
+
+h1#posts-header {
+  text-align: center;
+}
+
+tbody {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px;
+}
+tr.posts {
+  width: 25%;
+}
+td {
+  padding: 15px;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+  td img {
+    height: 200px;
+    border: 1px #f5f5f5 solid;
+    border-radius: 4px;
+  }
+  div.posts-details {
+    text-align: center;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+  }
+    span#post-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    span#post-description {
+      font-size: 12px;
+      font-weight: lighter;
+    }
+      div.posts-button-div {
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        padding: 0 50px 0 50px;
+        margin-top: 20px;
+      }
+        span#destroy-button-posts {
+          font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+          font-size: 15px;
+          border: none;
+          color: black !important;
+          &:hover {
+            color: red !important;
+          }
+        }
+        span#edit-button-posts {
+          font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+          font-size: 15px;
+          border: none;
+          color: black;
+            &:hover {
+              color: blue;
+            }
+        }

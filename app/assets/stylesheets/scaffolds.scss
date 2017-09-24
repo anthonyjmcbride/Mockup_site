@@ -15,46 +15,10 @@ pre {
 }
 
 a {
-  // color: #000;
-  //
-  // &:visited {
-  //   color: none;
+
   }
 
-//   &:hover {
-//     color: navy;
-//     background-color: none;
-//   }
-// }
 
-th {
-  padding-bottom: 5px;
-  color: red;
-  font-size: 17px;
-}
-
-table.table {
-  width: 100%;
-  background-color: white;
-}
-
-tr.posts {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-tbody {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-td {
-  display: flex;
-  flex-direction: column;
-}
 
 div {
   &.field, &.actions {

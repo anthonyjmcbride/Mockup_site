@@ -10,7 +10,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1 id="posts-header">Posts</h1>
 
 <table class="table">
 
@@ -19,11 +19,14 @@
     <% @posts.each do |post| %>
       <tr class="posts">
         <td> <%= image_tag(post.avatar.url(:thumb)) %> <br>
-        <%= post.title %> <br>
-        <%= post.description %><br>
-
-        <button><%= link_to 'Edit', edit_post_path(post) %></button>
-        <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+          <div class="posts-details">
+            <span id="post-title"><%= post.title %></span> <br>
+            <span id="post-description"><%= post.description %></span><br>
+          </div>
+          <div class="posts-button-div">
+            <span id="destroy-button-posts"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+            <span id="edit-button-posts"><%= link_to 'Edit >', edit_post_path(post) %></span>
+          </div>
         </td>
       </tr>
     <% end %>
